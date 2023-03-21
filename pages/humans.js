@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import TeamCards from "../components/TeamCards";
 import React, { useState } from "react";
 import Head from "next/head";
+import Button from "../components/Button";
 
 export default function Humans() {
     const [team, setTeam] = useState("Tech");
@@ -82,19 +83,15 @@ export default function Humans() {
                             id={team}>
                             <div className="team-selector mt-12 mb-4">
                                 {Object.keys(teams).map((t) => (
-                                    <div
-                                        className={
-                                            "button mr-4 last:mr-0 hover:cursor-pointer" +
-                                            (team === t
-                                                ? "selected text-[#0042c6] before:origin-left before:scale-x-100"
-                                                : "")
-                                        }
-                                        style={{ fontSize: "1.5rem" }}
-                                        // style is needed because globals.css still has the button css overriding
+                                    <Button
+                                        className={"mr-4 last:mr-0 text-2xl" + (team === t
+                                            ? "selected text-[#0042c6] before:origin-left before:scale-x-100"
+                                            : "")}
+                                        text={t}
+                                        color={team === t ? "#0042c6" : "black"}
                                         onClick={() => setTeam(t)}
-                                        key={t}>
-                                        {t}
-                                    </div>
+                                        key={t}
+                                    />
                                 ))}
                             </div>
                             <div className="mb-8 text-[1rem]">

@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeroBackground from "../components/HeroBackground";
 import SponsorUs from "../components/SponsorUs";
+import Button from "../components/Button";
 
 import { AiOutlineArrowRight } from "react-icons/ai";
 
@@ -29,16 +30,14 @@ export default function Home() {
                                     Duke to further social good. Sound
                                     interesting?
                                 </div>
-                                <div
-                                    className="button"
-                                    style={{ color: "#0042c6" }}
-                                    onClick={() => {
-                                        router.push("/about");
-                                    }}
-                                >
-                                    Read our story{" "}
-                                    <AiOutlineArrowRight size={28} className="pl-1" />
-                                </div>
+
+                                <Button 
+                                    text="Join us"
+                                    color="#0042c6"
+                                    link="/about"
+                                    arrow={true}
+                                />
+                                
                             </div>
                             <div className="column" id="index-s1-c2">
                                 <img

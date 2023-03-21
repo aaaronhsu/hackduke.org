@@ -2,6 +2,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import HeroBackground from "../../components/HeroBackground";
 import Head from "next/head";
+import Button from "../../components/Button";
 
 import { AiOutlineArrowRight } from "react-icons/ai";
 
@@ -38,16 +39,13 @@ export default function Feb18() {
                                     served and we hope to see you there!
                                 </p>
                             </div>
-                            <a
-                                className="button"
-                                id="about-hero-button"
-                                style={{ color: "#ffffff" }}
-                                href="https://forms.gle/BZgGppMWKMkz1r3r5"
+
+                            <Button 
+                                text="Register now"
+                                color="#ffffff"
                                 onClick={() => gtag("event", "event_form_open")}
-                            >
-                                Register now{" "}
-                                <AiOutlineArrowRight size={28} className="pl-1" />
-                            </a>
+                                arrow={true}
+                            />
                         </div>
                     </div>
                 </div>

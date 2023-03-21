@@ -2,13 +2,11 @@ import Navbar from "../../components/Navbar";
 import SponsorUs from "../../components/SponsorUs";
 import Footer from "../../components/Footer";
 import Head from "next/head";
+import Button from "../../components/Button";
 
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-import { useRouter } from "next/router";
-
 export default function Events() {
-    const router = useRouter();
     return (
         <>
             <Head>
@@ -121,19 +119,14 @@ export default function Events() {
                                     hope to see you there!
                                 </p>
                             </div>
-                            <div
-                                className="button text-[1.25rem] border-transparent bg-transparent relative p-0 ml-0 mr-auto hover:border-transparent hover:bg-transparent before:content-[''] before:absolute before:w-full before:h-[2px] before:rounded-[4px] before:bg-[#0042c6] before:bottom-[4px] before:left-0 before:origin-right	before:scale-x-0 before:ease-in-out before:duration-300 hover:before:origin-left hover:before:scale-x-100"
-                                style={{ color: "#0042c6" }}
-                                onClick={() => {
-                                    // gtag('event', 'event_form_open')
-                                    router.push(
-                                        "https://www.linkedin.com/feed/update/urn:li:activity:7032811883829051392"
-                                    );
-                                }}
-                            >
-                                See the event{" "}
-                                <AiOutlineArrowRight size={28} className="pl-1" />
-                            </div>
+
+                            <Button 
+                                text="See the event"
+                                color="#0042c6"
+                                link="https://www.linkedin.com/feed/update/urn:li:activity:7032811883829051392"
+                                arrow={true}
+                            />
+
                         </div>
                         <div className="column">
                             <img
@@ -161,16 +154,14 @@ export default function Events() {
                                 students can create meaningful technical
                                 projects or learn the skills to get there.
                             </div>
-                            <div
-                                className="button text-[1.25rem] border-transparent bg-transparent relative p-0 ml-0 mr-auto hover:border-transparent hover:bg-transparent before:content-[''] before:absolute before:w-full before:h-[2px] before:rounded-[4px] before:bg-[#0042c6] before:bottom-[4px] before:left-0 before:origin-right	before:scale-x-0 before:ease-in-out before:duration-300 hover:before:origin-left hover:before:scale-x-100"
-                                style={{ color: "#0042c6" }}
-                                onClick={() => {
-                                    router.push("https://2022.hackduke.org");
-                                }}
-                            >
-                                Code For Good 2022{" "}
-                                <AiOutlineArrowRight size={28} className="pl-1" />
-                            </div>
+
+                            <Button 
+                                text="Code For Good 2022"
+                                color="#0042c6"
+                                link="https://2022.hackduke.org"
+                                arrow={true}
+                            />
+
                         </div>
                         <div className="column">
                             <img
@@ -205,16 +196,13 @@ export default function Events() {
                                 aficionados, curious newcomers, and everyone in
                                 between!
                             </div>
-                            <div
-                                className="button text-[1.25rem] border-transparent bg-transparent relative p-0 ml-0 mr-auto hover:border-transparent hover:bg-transparent before:content-[''] before:absolute before:w-full before:h-[2px] before:rounded-[4px] before:bg-[#0042c6] before:bottom-[4px] before:left-0 before:origin-right	before:scale-x-0 before:ease-in-out before:duration-300 hover:before:origin-left hover:before:scale-x-100"
-                                style={{ color: "#0042c6" }}
-                                onClick={() => {
-                                    router.push("https://ideate.hackduke.org");
-                                }}
-                            >
-                                Ideate 2022{" "}
-                                <AiOutlineArrowRight size={28} className="pl-1" />
-                            </div>
+
+                            <Button 
+                                text="Ideate 2022"
+                                color="#0042c6"
+                                link="https://ideate.hackduke.org"
+                                arrow={true}
+                            />
                         </div>
                     </div>
                 </div>

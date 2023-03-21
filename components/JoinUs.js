@@ -1,9 +1,7 @@
 import { AiOutlineArrowRight } from "react-icons/ai";
-
-import { useRouter } from "next/router";
+import Button from "./Button";
 
 function JoinUs(props) {
-    const router = useRouter();
     return (
         <>
             <section className="section is-small" id="join-us">
@@ -15,17 +13,14 @@ function JoinUs(props) {
                         Join our mailing list to get notified when applications
                         are released.
                     </div>
-                    <div
-                        className="button"
-                        id="index-s1-b1"
-                        style={{ color: "#0042c6" }}
-                        onClick={() => {
-                            router.push("/join");
-                        }}
-                    >
-                        Join our team{" "}
-                        <AiOutlineArrowRight size={28} className="pl-1" />
-                    </div>
+
+                    <Button 
+                        text="Join our team"
+                        color="#0042c6"
+                        link="/join"
+                        arrow={true}
+                    />
+
                 </div>
             </section>
         </>

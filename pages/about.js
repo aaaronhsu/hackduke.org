@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import JoinUs from "../components/JoinUs";
 import Footer from "../components/Footer";
 import Head from "next/head";
+import Button from "../components/Button";
 
 import { AiOutlineArrowRight } from "react-icons/ai";
 
@@ -51,6 +52,14 @@ export default function About() {
                             More about our events{" "}
                             <AiOutlineArrowRight size={28} className="pl-1" />
                         </div>
+
+                        <Button 
+                            text="More about our events"
+                            color="#ffffff"
+                            link="/events"
+                            arrow={true}
+                        />
+                        
                     </div>
                 </section>
                 <section className="section is-medium font-sans">
